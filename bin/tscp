@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+require "thor"
+require_relative "main"
+
+class TSCP < Thor 
+	def self.exit_on_faliure 
+		true
+	end
+
+	desc "dosmth", "Prints something"
+	def dosmth 
+		puts File.read("assets/computer.dat")
+	end
+
+	desc "fetch URI", "Fetch the server data"
+	def fetch(uri)
+		puts "Your URI: #{uri}"
+		CORE::WebFetcher.fetch(uri)
+	end
+end
+
+TSCP.start
