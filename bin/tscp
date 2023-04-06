@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require "thor"
-require_relative "main"
+require_relative "core"
+
 
 class TSCP < Thor 
 	def self.exit_on_faliure 
@@ -14,7 +15,6 @@ class TSCP < Thor
 
 	desc "fetch URI", "Fetch the server data"
 	def fetch(uri)
-		puts "Your URI: #{uri}"
 		CORE::WebFetcher.fetch(uri)
 	end
 end
