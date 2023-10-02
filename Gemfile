@@ -12,3 +12,5 @@ gem "artii", "~> 2.1"
 gem "colorize", "~> 0.8.1"
 
 gem "terminal-table", "~> 3.0"
+
+gem "nokogiri", "~> 1.15"

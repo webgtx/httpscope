@@ -8,11 +8,6 @@ class TSCP < Thor
 		true
 	end
 
-	desc "dosmth", "Prints something"
-	def dosmth 
-		puts File.read("assets/computer.dat")
-	end
-
 	desc "fetch URI", "Fetch the server data"
 	def fetch(uri)
 		CORE::WebFetcher.fetch(uri)

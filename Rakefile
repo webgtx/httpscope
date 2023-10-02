@@ -1,7 +1,8 @@
-task default: %w[test]
+task default: :test
 
 task :test do 
-	ruby "test/unit_test.rb"
+	# ruby "test/unit_test.rb"
+	ruby "bin/httpscope fetch https://webgtx.me"
 end
 
 task :multifetch do
@@ -14,6 +15,6 @@ task :multifetch do
 	]
 
 	url_list.each do |url|
-		ruby "bin/tscp fetch https://#{url}"
+		ruby "bin/httpscope fetch https://#{url}"
 	end
 end
